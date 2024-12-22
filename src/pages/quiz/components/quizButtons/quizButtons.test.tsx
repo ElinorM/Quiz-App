@@ -69,8 +69,7 @@ describe('QuizButtons', () => {
   it('should disable next button if no option is selected', () => {
     props = mockProps({ question: { ...props.question, selectedOption: undefined } });
     render(<QuizButtons {...props} />);
-    const nextButton = screen.getByRole('button', { name: 'Next' });
-    expect(nextButton).toBeDisabled();
+    expect(screen.getByRole('button', { name: 'Next' })).toBeDisabled();
   });
 
   it('should render submit button if questionCount equals (questions length - 1)', () => {

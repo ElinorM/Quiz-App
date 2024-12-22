@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02b0eca9-5a86-437d-905b-78f64b885b12" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/quiz/components/questionPage/questionPage.test.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/quiz/quiz.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/quiz/__snapshots__/quiz.test.tsx.snap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/quiz/Quiz.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/quiz/Quiz.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/quiz/components/quizButtons/QuizButtons.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/quiz/components/quizButtons/QuizButtons.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/quiz/components/quizButtons/__snapshots__/quizButtons.test.tsx.snap" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/quiz/components/quizButtons/__snapshots__/quizButtons.test.tsx.snap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/quiz/components/quizButtons/quizButtons.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/quiz/components/quizButtons/quizButtons.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
