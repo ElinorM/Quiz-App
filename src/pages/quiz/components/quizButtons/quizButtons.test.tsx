@@ -10,8 +10,8 @@ const mockProps = (props?: Partial<QuizButtonsProps>) => {
     question: {
       title: 'What is the capital of France?',
       options: ['New York', 'London', 'Paris', 'Dublin'],
-      answer: 'Paris',
-      selectedOption: 'Paris',
+      answer: ['Paris'],
+      selectedOption: ['Paris'],
     },
     questionCount: 2,
     setQuestionCount: jest.fn(),
@@ -67,7 +67,7 @@ describe('QuizButtons', () => {
   });
 
   it('should disable next button if no option is selected', () => {
-    props = mockProps({ question: { ...props.question, selectedOption: undefined } });
+    props = mockProps({ question: { ...props.question, selectedOption: [] } });
     render(<QuizButtons {...props} />);
     expect(screen.getByRole('button', { name: 'Next' })).toBeDisabled();
   });
@@ -91,7 +91,7 @@ describe('QuizButtons', () => {
   });
 
   it('should disable submit button if no option is selected', () => {
-    props = mockProps({ question: { ...props.question, selectedOption: undefined }, questionCount: QUESTIONS.length - 1 });
+    props = mockProps({ question: { ...props.question, selectedOption: [] }, questionCount: QUESTIONS.length - 1 });
     render(<QuizButtons {...props} />);
     const nextButton = screen.getByRole('button', { name: 'Submit' });
     expect(nextButton).toBeDisabled();

@@ -21,7 +21,12 @@ export const Quiz = () => {
 
   const updateSelectedOption = (selectedOption: string) => {
     const updatedQuestions = [...questions];
-    updatedQuestions[questionCount].selectedOption = selectedOption;
+    if(questions[questionCount].selectedOption.includes(selectedOption)) {
+      updatedQuestions[questionCount].selectedOption = updatedQuestions[questionCount].selectedOption.filter(option => option !== selectedOption);
+      setQuestions(updatedQuestions);
+      return;
+    }
+    updatedQuestions[questionCount].selectedOption.push(selectedOption);
     setQuestions(updatedQuestions);
   }
 

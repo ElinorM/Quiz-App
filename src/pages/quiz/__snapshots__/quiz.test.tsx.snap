@@ -22,7 +22,7 @@ Object {
                   <input
                     id="0"
                     name="New York"
-                    type="radio"
+                    type="checkbox"
                     value="New York"
                   />
                   New York
@@ -33,7 +33,7 @@ Object {
                   <input
                     id="1"
                     name="London"
-                    type="radio"
+                    type="checkbox"
                     value="London"
                   />
                   London
@@ -44,7 +44,7 @@ Object {
                   <input
                     id="2"
                     name="Paris"
-                    type="radio"
+                    type="checkbox"
                     value="Paris"
                   />
                   Paris
@@ -55,7 +55,7 @@ Object {
                   <input
                     id="3"
                     name="Dublin"
-                    type="radio"
+                    type="checkbox"
                     value="Dublin"
                   />
                   Dublin
@@ -94,7 +94,7 @@ Object {
                 <input
                   id="0"
                   name="New York"
-                  type="radio"
+                  type="checkbox"
                   value="New York"
                 />
                 New York
@@ -105,7 +105,7 @@ Object {
                 <input
                   id="1"
                   name="London"
-                  type="radio"
+                  type="checkbox"
                   value="London"
                 />
                 London
@@ -116,7 +116,7 @@ Object {
                 <input
                   id="2"
                   name="Paris"
-                  type="radio"
+                  type="checkbox"
                   value="Paris"
                 />
                 Paris
@@ -127,7 +127,7 @@ Object {
                 <input
                   id="3"
                   name="Dublin"
-                  type="radio"
+                  type="checkbox"
                   value="Dublin"
                 />
                 Dublin

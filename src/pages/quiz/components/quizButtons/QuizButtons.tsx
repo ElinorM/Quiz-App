@@ -27,8 +27,8 @@ export const QuizButtons = ({question, questionCount, setQuestionCount, setSubmi
     <div css={style.buttonsWrapper}>
       {showPreviousButton && <button onClick={() => setQuestionCount(questionCount - 1)}>Previous</button>}
       {showNextButton
-        ? <button onClick={() => setQuestionCount(questionCount + 1)} disabled={!question.selectedOption}>Next</button>
-        : <button onClick={() => setSubmitted(true)} disabled={!question.selectedOption}>Submit</button>
+        ? <button onClick={() => setQuestionCount(questionCount + 1)} disabled={question.selectedOption.length === 0}>Next</button>
+        : <button onClick={() => setSubmitted(true)} disabled={question.selectedOption.length === 0}>Submit</button>
       }
     </div>
   );

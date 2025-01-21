@@ -8,7 +8,8 @@ const props: QuestionPageProps = {
   question: {
     title: 'What is the capital of France?',
     options: ['New York', 'London', 'Paris', 'Dublin'],
-    answer: 'Paris',
+    answer: ['Paris'],
+    selectedOption: [],
   },
   updateSelectedOption: jest.fn(),
 };
@@ -19,9 +20,9 @@ describe('QuestionPage', () => {
   });
 
 
-  it('should call updateSelectedOption on radio button click', async () => {
+  it('should call updateSelectedOption on checkbox click', async () => {
     render(<QuestionPage {...props} />,);
-    await userEvent.click(screen.getByRole('radio', { name: 'London' }));
+    await userEvent.click(screen.getByRole('checkbox', { name: 'London' }));
     expect(props.updateSelectedOption).toHaveBeenCalledWith('London');
   });
 
@@ -30,11 +31,11 @@ describe('QuestionPage', () => {
     expect(screen.getByText('What is the capital of France?')).toBeInTheDocument();
   });
 
-  it('should render radio buttons', () => {
+  it('should checkboxes', () => {
     render(<QuestionPage {...props} />);
-    expect(screen.getByRole('radio', { name: 'New York' })).toBeInTheDocument();
-    expect(screen.getByRole('radio', { name: 'London' })).toBeInTheDocument();
-    expect(screen.getByRole('radio', { name: 'Paris' })).toBeInTheDocument();
-    expect(screen.getByRole('radio', { name: 'Dublin' })).toBeInTheDocument();
+    expect(screen.getByRole('checkbox', { name: 'New York' })).toBeInTheDocument();
+    expect(screen.getByRole('checkbox', { name: 'London' })).toBeInTheDocument();
+    expect(screen.getByRole('checkbox', { name: 'Paris' })).toBeInTheDocument();
+    expect(screen.getByRole('checkbox', { name: 'Dublin' })).toBeInTheDocument();
   });
 });

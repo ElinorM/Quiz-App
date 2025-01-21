@@ -8,7 +8,7 @@ export interface QuestionPageProps {
 export const QuestionPage = ({ question, updateSelectedOption }: QuestionPageProps) => {
   const { title, options, selectedOption } = question;
 
-  const onRadioButtonChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const selectedOption = event.target.value;
     updateSelectedOption(selectedOption);
   }
@@ -21,12 +21,12 @@ export const QuestionPage = ({ question, updateSelectedOption }: QuestionPagePro
           <div key={index}>
             <label>
               <input
-                type="radio"
+                type="checkbox"
                 id={`${index}`}
                 name={option}
                 value={option}
-                checked={option === selectedOption}
-                onChange={onRadioButtonChange}
+                checked={selectedOption?.includes(option)}
+                onChange={onChange}
               />
               {option}
             </label>
